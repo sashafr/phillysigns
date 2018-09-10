@@ -19,18 +19,7 @@
     <!-- Plugin Stuff -->
     <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
-    <!-- Stylesheets -->
-    <?php
-    queue_css_url('//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-    queue_css_file(array('iconfonts','style'));
-    echo head_css();
-    ?>
 
-    <!-- JavaScripts -->
-    <?php 
-    queue_js_file(array('jquery-accessibleMegaMenu', 'minimalist', 'globals'));
-    echo head_js(); 
-    ?>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
@@ -53,13 +42,13 @@
                 <?php echo search_form(); ?>
                 <?php endif; ?>
             </div>
-            
+
             <nav id="top-nav" role="navigation">
                 <?php echo public_nav_main(); ?>
             </nav>
 
         </header>
-        
+
         <article id="content" role="main" tabindex="-1">
-        
+
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
