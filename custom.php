@@ -8,7 +8,7 @@
 *  https://github.com/sampotts/plyr
 */
 function display_video($item='item') {
-    if (metadata($item,array('Item Type Metadata','Embedded Video'))) {
+    if (element_exists('Item Type Metadata','Embedded Video') && metadata($item,array('Item Type Metadata','Embedded Video'))) {
         $videoTitle = metadata($item,array('Dublin Core','Title'));
 		$videoDesc = metadata($item,array('Dublin Core','Description')); ?>
         <div class="center-video">
