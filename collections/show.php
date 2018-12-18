@@ -1,6 +1,4 @@
 <?php echo head(); ?>
-
-<div class="fh5co-narrow-content">
     <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft"><?php echo metadata($collection, array('Dublin Core','Title')) ?></h2>
     <div class="row animate-box" data-animate-effect="fadeInLeft">
         <?php set_loop_records('items', get_records('Item',array('collection'=>$collection))); ?>
@@ -18,6 +16,5 @@
             </div>
         <?php endforeach; ?>
     </div>
-</div>
 
 <?php echo foot(); ?>

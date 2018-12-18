@@ -106,3 +106,4 @@
 		<div id="fh5co-main">
 
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+            <?php if (!is_current_url(url('/'))): ?><div class="fh5co-narrow-content"><?php endif; ?>

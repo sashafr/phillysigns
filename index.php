@@ -1,17 +1,16 @@
 <?php echo head(); ?>
 
 <div class="fh5co-testimonial" >
-    <div class="fh5co-narrow-content">
-        <div class="animate-box" data-animate-effect="fadeInLeft">
-            <div class="item">
-                <figure class="ps-header-image-container">
-                    <?php if(get_theme_option('home_about_banner')): ?>
-                        <?php $banner_url = WEB_ROOT.'/files/theme_uploads/'.get_theme_option('home_about_banner'); ?>
-                        <img src="<?php echo $banner_url ?>" alt="About Section Header Image">
-                    <?php endif; ?>
-                </figure>
-                <p class="text-center quote"><?php echo get_theme_option('homepage_text') ?></p>
-            </div>
+    <div class="animate-box" data-animate-effect="fadeInLeft">
+        <div class="item">
+            <h1 class="sm-title"><?php echo option('site_title') ?></h1>
+            <figure class="ps-header-image-container">
+                <?php if(get_theme_option('home_about_banner')): ?>
+                    <?php $banner_url = WEB_ROOT.'/files/theme_uploads/'.get_theme_option('home_about_banner'); ?>
+                    <img src="<?php echo $banner_url ?>" alt="About Section Header Image">
+                <?php endif; ?>
+            </figure>
+            <p class="text-center quote"><?php echo get_theme_option('homepage_text') ?></p>
         </div>
     </div>
 </div>
