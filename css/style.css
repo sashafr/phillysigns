@@ -80,7 +80,6 @@ figure {
     bottom: 0;
     top: 0;
     left: 0;
-    overflow-y: scroll;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -93,7 +92,7 @@ figure {
         width: 30%;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #fh5co-aside {
         width: 270px;
         -moz-transform: translateX(-270px);
@@ -229,7 +228,7 @@ figure {
         width: 70%;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #fh5co-main {
         width: 100%;
     }
@@ -1065,7 +1064,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     -o-transition: 0.5s;
     transition: 0.5s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .fh5co-nav-toggle {
         opacity: 1;
         visibility: visible;
