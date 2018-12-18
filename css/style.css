@@ -355,7 +355,9 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     text-align: center;
 }
 .fh5co-testimonial .item figure img {
-    max-width: inherit;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
     margin: 0 auto;
 }
 .fh5co-testimonial .item p {
@@ -1110,4 +1112,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 #admin-bar {
     display: none;
+}
+
+.ps-header-image-container {
+    position: relative;
 }

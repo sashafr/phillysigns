@@ -48,7 +48,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
-    <?php queue_css_file(array('animate', 'icomoon', 'bootstrap', 'style', 'plyr')); ?>
+    <?php queue_css_file(array('animate', 'icomoon', 'bootstrap', 'style', 'plyr', 'lity')); ?>
     <?php queue_css_url('themes/phillysigns/css/owl.carousel.min.css'); ?>
     <?php queue_css_url('themes/phillysigns/css/owl.theme.default.min.css'); ?>
     <?php echo head_css(); ?>
@@ -64,6 +64,7 @@
     <script src="<?php echo src('jquery.countTo', 'javascripts', 'js') ?>"></script>
     <script src="<?php echo src('main', 'javascripts', 'js') ?>"></script>
     <script src="<?php echo src('plyr', 'javascripts', 'js') ?>"></script>
+    <script src="<?php echo src('lity', 'javascripts', 'js') ?>"></script>
 
 
     <!-- Plugin Stuff -->
