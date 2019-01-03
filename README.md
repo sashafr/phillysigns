@@ -1,8 +1,13 @@
 # PhillySigns
+
+*[A Penn Libraries Digital Scholarship Project](https://guides.library.upenn.edu/digital-scholarship)*
+
 Minimalist inspired theme for video clip galleries - built for Philly Signs project:
 * Featured collections are previewed on the home homepage
 * For embedding iframes in the gallery - If you add an Item Type Element called "Embedded Video", you can paste in iframes into the element field and it will display alongside other videos in the gallery
 * Most video types will display consistently in the gallery views, using an accessible player ([plyr](https://github.com/sampotts/plyr))
+
+## Getting Started
 
 ### Prerequisites
 1. Adding an "Embedded Video" item type element will aid in display of iframes as the main video for an item
@@ -16,10 +21,8 @@ Minimalist inspired theme for video clip galleries - built for Philly Signs proj
 * Theme design based on [this template](https://freehtml5.co/nitro-free-website-template-using-bootstrap-3/)
 * Theme structure based on [Minimalist](https://github.com/omeka/theme-minimalist)
 
-
-
 ## Authors
-* **Najay Greenidge** - Project Developer
-* **Laiqa Shariff** - Project Developer
+* **Najay Greenidge** - Project Developer - [Github](https://github.com/ngreenidge)
+* **Laiqa Shariff** - Project Developer - [Github](https://github.com/laiqa19)
 * **Emma Jang** - Project Developer
 * **Sasha Renninger** - Project Lead - [Github](https://github.com/sashafr)
