@@ -85,6 +85,7 @@
 
             <div class="fh5co-footer">
                 <p><small><?php echo (get_theme_option('footer_text')) ?></small></p>
+                <p><small>Theme developed by the <a href="https://github.com/upenndigitalscholarship">Penn Libraries</a> |  <a href="https://github.com/upenndigitalscholarship/phillysigns">Get the Code</a></small></p>
                 <ul>
                     <?php if(get_theme_option('facebook_link')): ?>
                         <li><a href="<?php echo (get_theme_option('facebook_link')) ?>"><i class="icon-facebook"></i></a></li>

@@ -43,9 +43,11 @@
 					<a href="<?php echo record_url(get_previous_item($item)) ?>"><i class="icon-long-arrow-left"></i> <span>Previous Item</span></a>
 				</div>
             <?php endif ?>
-			<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-				<a href="<?php echo record_url(get_collection_for_item($item)); ?>"><i class="icon-th-large"></i></a>
-			</div>
+            <?php if (get_collection_for_item($item)): ?>
+    			<div class="col-md-4 col-sm-4 col-xs-4 text-center">
+    				<a href="<?php echo record_url(get_collection_for_item($item)); ?>"><i class="icon-th-large"></i></a>
+    			</div>
+    		<?php endif ?>
             <?php if (get_next_item($item)): ?>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
 					<a href="<?php echo record_url(get_next_item($item)) ?>"><span>Next Item</span> <i class="icon-long-arrow-right"></i> </a>
