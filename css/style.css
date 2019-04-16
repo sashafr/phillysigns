@@ -277,12 +277,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     text-align: center;
 }
 .work-item a img {
-    margin-bottom: 10px;
-    float: left;
     border: 10px solid transparent;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    margin: auto;
+    display: block;
 }
 .work-item a h3 {
     font-size: 20px;
@@ -1140,4 +1140,13 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .text-center {
     word-wrap: break-word;
+}
+
+.video-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.ps-learn-more {
+    padding-left: 35px;
 }
