@@ -28,6 +28,7 @@ function display_video($item='item') {
     <?php } else {
     	$videoTypes = array('video/mp4','video/mpeg','video/quicktime');
         $captionTypes = array('text/vtt');
+        $found_video = false;
     	foreach (loop('files', $item->Files) as $file){
     		$videoMime = metadata($file,'MIME Type');
             if ( in_array($videoMime,$captionTypes)) {
@@ -57,9 +58,15 @@ function display_video($item='item') {
                       }
                     });
         		</script>
+                <?php $found_video = true; ?>
                 <?php break; ?>
     		<?php endif; ?>
     	<?php };
+        // if no videos found, just use thumbnail image
+        if (!$found_video) {
+            $itemImage = record_image($item, 'square_thumbnail');
+            echo link_to_item($itemImage, array('class' => 'center-video'), 'show', $item);
+        }
     }
 }
 

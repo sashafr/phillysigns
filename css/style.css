@@ -277,12 +277,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     text-align: center;
 }
 .work-item a img {
-    margin-bottom: 10px;
-    float: left;
     border: 10px solid transparent;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    margin: auto;
+    display: block;
 }
 .work-item a h3 {
     font-size: 20px;
@@ -333,6 +333,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-testimonial {
     padding: 3em 0;
     background: #1e1e5b;
+    overflow: auto;
 }
 @media screen and (max-width: 1024px) {
     .fh5co-testimonial {
@@ -434,6 +435,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     background: #fff;
     padding: 30px;
     margin-bottom: 10px;
+    width: 49.5%;
 }
 .fh5co-cards .fh5co-flex-wrap > div:nth-of-type(1) {
     float: left;
@@ -966,7 +968,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     color: #fff;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-    background: #000;
+    background: #fff;
     color: #fff;
 }
 .fh5co-nav-toggle.dark.active i::before, .fh5co-nav-toggle.dark.active i::after {
@@ -1125,11 +1127,36 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .sm-title {
     text-align: center;
     color: #fff;
-    display: none;
 }
 
 @media screen and (max-width: 1024px) {
     .sm-title {
         display: block;
     }
+}
+
+.fh5co-footer p {
+    word-wrap: break-word;
+}
+
+.text-center {
+    word-wrap: break-word;
+}
+
+.video-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.browse-box-row {
+    padding-bottom: 10px;
+}
+
+.ps-learn-more {
+    padding-left: 35px;
+}
+
+.ps-browse-box-image {
+    float: left;
+    padding: 0 15px 15px 0;
 }
