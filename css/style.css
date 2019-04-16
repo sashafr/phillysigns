@@ -333,6 +333,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-testimonial {
     padding: 3em 0;
     background: #1e1e5b;
+    overflow: auto;
 }
 @media screen and (max-width: 1024px) {
     .fh5co-testimonial {
@@ -1125,11 +1126,18 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .sm-title {
     text-align: center;
     color: #fff;
-    display: none;
 }
 
 @media screen and (max-width: 1024px) {
     .sm-title {
         display: block;
     }
+}
+
+.fh5co-footer p {
+    word-wrap: break-word;
+}
+
+.text-center {
+    word-wrap: break-word;
 }

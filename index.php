@@ -3,7 +3,10 @@
 <div class="fh5co-testimonial" >
     <div class="animate-box" data-animate-effect="fadeInLeft">
         <div class="item">
-            <h1 class="sm-title"><?php echo option('site_title') ?></h1>
+            <!-- only display title here if there is a logo and title isn't displaying in sidebar -->
+            <?php if(get_theme_option('logo')): ?>
+                <h1 class="sm-title"><?php echo option('site_title') ?></h1>
+            <?php endif; ?>
             <figure class="ps-header-image-container">
                 <?php if(get_theme_option('home_about_banner')): ?>
                     <?php $banner_url = WEB_ROOT.'/files/theme_uploads/'.get_theme_option('home_about_banner'); ?>
@@ -38,6 +41,9 @@
                 </div>
             </div>
         <?php endforeach; ?>
+    </div>
+    <div class="row animate-box" data-animate-effect="fadeInLeft">
+        <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
     </div>
 </div>
 
