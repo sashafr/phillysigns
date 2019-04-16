@@ -43,8 +43,8 @@
                 <div class="col-md-4 ps-learn-more">
                     <p><?php echo link_to_collection('Learn More', array('class'=>'btn btn-md btn-primary'), null, $col); ?></p>
                 </div>
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 </div>
 
