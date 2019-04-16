@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo get_html_lang(); ?>"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,22 +49,14 @@
 
     <!-- CSS -->
     <?php queue_css_file(array('animate', 'icomoon', 'bootstrap', 'style', 'plyr', 'lity')); ?>
-    <?php queue_css_url('themes/phillysigns/css/owl.carousel.min.css'); ?>
-    <?php queue_css_url('themes/phillysigns/css/owl.theme.default.min.css'); ?>
+    <?php queue_css_url(src('owl.carousel.min', 'css', 'css')); ?>
+    <?php queue_css_url(src('owl.theme.default.min', 'css', 'css')); ?>
     <?php echo head_css(); ?>
 
     <!-- JS -->
-    <script src="<?php echo src('jquery.min', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('modernizr-2.6.2.min', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('jquery.easing.1.3', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('bootstrap.min', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('owl.carousel.min', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('jquery.stellar.min', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('jquery.waypoints.min', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('jquery.countTo', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('main', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('plyr', 'javascripts', 'js') ?>"></script>
-    <script src="<?php echo src('lity', 'javascripts', 'js') ?>"></script>
+    <?php queue_js_url(src('modernizr-2.6.2.min', 'javascripts', 'js')); ?>
+    <?php queue_js_file(array('plyr', 'lity')); ?>
+    <?php echo head_js(); ?>
 
 
     <!-- Plugin Stuff -->
