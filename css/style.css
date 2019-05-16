@@ -1162,12 +1162,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     padding: 0 15px 15px 0;
 }
 
-.items-nav .navigation {
+.items-nav .navigation, #output-format-list {
     list-style: none;
     padding-left: 0px;
 }
 
-.items-nav .navigation li, #sort-links-list li, .sort-label {
+.items-nav .navigation li, #sort-links-list li, .sort-label, #output-format-list li {
     display: inline;
     padding: 0px 8px;
 }
@@ -1230,4 +1230,15 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .item-plugin-hook {
     text-align: center;
+}
+
+#itemfiles, #collection, #item-tags, #item-citation, #item-output-formats {
+    border-top: solid 2px #ccc;
+    padding: 1em 0;
+    margin-top: 1em;
+}
+
+.item-file {
+    display: inline-block;
+    padding: 0.5em;
 }
