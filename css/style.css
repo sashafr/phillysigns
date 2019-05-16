@@ -1162,17 +1162,17 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     padding: 0 15px 15px 0;
 }
 
-.items-nav .navigation, #output-format-list {
+.secondary-nav .navigation, #output-format-list {
     list-style: none;
     padding-left: 0px;
 }
 
-.items-nav .navigation li, #sort-links-list li, .sort-label, #output-format-list li {
+.secondary-nav .navigation li, #sort-links-list li, .sort-label, #output-format-list li {
     display: inline;
     padding: 0px 8px;
 }
 
-.items-nav .navigation .fh5co-active {
+.secondary-nav .navigation .fh5co-active {
     text-decoration: underline;
 }
 
