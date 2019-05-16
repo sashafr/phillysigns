@@ -1201,6 +1201,11 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 
 #sort-links {
+    padding-top: 0.5em;
+    padding: 1em 0;
+}
+
+.items #sort-links {
     display: inline-block;
     width: 100%;
     border-top: solid 2px #ccc;
@@ -1241,4 +1246,21 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .item-file {
     display: inline-block;
     padding: 0.5em;
+}
+
+.collections .collection {
+    text-align: left;
+    background: #fff;
+    padding: 3em;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    border-top: solid 2px #e5e5e5;
+}
+
+.view-items-link {
+    width: 100%;
+    display: inline-block;
+    padding-top: 1em;
+    border-bottom: none;
 }
