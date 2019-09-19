@@ -243,7 +243,7 @@ figure {
 @media screen and (max-width: 1024px) {
     #fh5co-main .fh5co-narrow-content {
         width: 100%;
-        padding: 3.5em 1em;
+        padding: 0 1em 3.5em 1em;
     }
 }
 
@@ -969,7 +969,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     color: #fff;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-    background: #fff;
+    background: #1e1e5b;
     color: #fff;
 }
 .fh5co-nav-toggle.dark.active i::before, .fh5co-nav-toggle.dark.active i::after {
@@ -989,18 +989,18 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     *display: inline;
     width: 30px;
     height: 2px;
-    color: #fff;
+    color: #1e1e5b;
     font: bold 14px/.4 Helvetica;
     text-transform: uppercase;
     text-indent: -55px;
-    background: #fff;
+    background: #1e1e5b;
     transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
     content: '';
     width: 30px;
     height: 2px;
-    background: #fff;
+    background: #1e1e5b;
     position: absolute;
     left: 0;
     -webkit-transition: 0.2s;
@@ -1071,6 +1071,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     -o-transition: 0.5s;
     transition: 0.5s;
     color: #fff;
+    background-color: #fff;
 }
 @media screen and (max-width: 1024px) {
     .fh5co-nav-toggle {
@@ -1263,4 +1264,20 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     display: inline-block;
     padding-top: 1em;
     border-bottom: none;
+}
+
+.item-show-main-video {
+    z-index: 500;
+}
+
+.mobile-title {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-title {
+        display: block;
+        text-align: center;
+        padding-top: 30px;
+    }
 }

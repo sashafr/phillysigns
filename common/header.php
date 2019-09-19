@@ -100,3 +100,4 @@
 
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
             <?php if (!is_current_url(url('/'))): ?><div class="fh5co-narrow-content"><?php endif; ?>
+            <h1 class="mobile-title"><?php echo link_to_home_page(theme_logo()); ?></h1>

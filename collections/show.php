@@ -11,7 +11,8 @@
                 <?php echo display_video($item) ?>
                 <a href="<?php echo record_url($item) ?>">
                     <h3 class="fh5co-work-title"><?php echo metadata($item,array('Dublin Core','Title')) ?></h3>
-                    <p><?php echo metadata($item,array('Dublin Core','Description')) ?></p>
+                    <!-- Uncomment this line if you want to display item description below title. -->
+                    <!-- <p><?php echo metadata($item,array('Dublin Core','Description')) ?></p> -->
                 </a>
             </div>
         <?php endforeach; ?>

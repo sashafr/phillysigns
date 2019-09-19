@@ -2,7 +2,7 @@
 
 	<div class="row">
 
-		<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+		<div class="col-md-12 animate-box item-show-main-video" data-animate-effect="fadeInLeft">
 			<figure class="text-center">
 				<?php echo display_video($item) ?>
 			</figure>
@@ -29,14 +29,6 @@
                     <?php endforeach; ?>
                 </table>
 
-                <!-- The following returns all of the files associated with an item. -->
-                <?php if (metadata('item', 'has files')): ?>
-                    <div id="itemfiles" class="element">
-                        <h3><?php echo __('Files'); ?></h3>
-                        <?php echo files_for_item(); ?>
-                    </div>
-                <?php endif; ?>
-
                 <!-- If the item belongs to a collection, the following creates a link to that collection. -->
                 <?php if (metadata('item', 'Collection Name')): ?>
                     <div id="collection" class="element item-collection">
@@ -59,12 +51,20 @@
                     <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
                 </div>
 
-                <div id="item-output-formats" class="element">
+                <!-- The following returns all of the files associated with an item. -->
+                <?php if (metadata('item', 'has files')): ?>
+                    <div id="itemfiles" class="element">
+                        <h3><?php echo __('Files'); ?></h3>
+                        <?php echo files_for_item(); ?>
+                    </div>
+                <?php endif; ?>                
+
+                <!--<div id="item-output-formats" class="element">
                     <h3><?php echo __('Output Formats'); ?></h3>
                     <div class="element-text"><?php echo output_format_list(); ?></div>
-                </div>
+                </div> -->
 
-                <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>                
+                <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 			</div>
 
 		</div>

@@ -27,7 +27,7 @@ function display_video($item='item') {
 		</script>
     <?php } else {
     	$videoTypes = array('video/mp4','video/mpeg','video/quicktime');
-        $captionTypes = array('text/vtt');
+        $captionTypes = array('text/vtt', 'text/plain');
         $found_video = false;
     	foreach (loop('files', $item->Files) as $file){
     		$videoMime = metadata($file,'MIME Type');
@@ -37,6 +37,7 @@ function display_video($item='item') {
             }
         }
         foreach (loop('files', $item->Files) as $file){
+                $videoMime = metadata($file, 'MIME Type');
     		if ( in_array($videoMime,$videoTypes) ): ?>
     			<?php $videoTitle = metadata($file,array('Dublin Core','Title')); ?>
     			<?php $videoDesc = metadata($file,array('Dublin Core','Description')); ?>
