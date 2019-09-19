@@ -33,6 +33,7 @@
                         <div class="row">
                             <a href="<?php echo record_url($featcolitem) ?>">
                                 <h3 class="fh5co-work-title"><?php echo metadata($featcolitem,array('Dublin Core','Title')) ?></h3>
+
                                 <!-- Uncomment this line if you want to display item description below title. -->
                                 <!-- <p><?php echo metadata($featcolitem,array('Dublin Core','Description')) ?></p> -->
                             </a>
