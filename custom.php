@@ -54,6 +54,9 @@ function display_video($item='item') {
                     document.addEventListener('DOMContentLoaded', () => {
                       const player = new Plyr('#jsplayer-<?php echo $file->id ?>', {
                         clickToPlay: false,
+                        captions: {
+                          active: true,
+                        },
                       });
                       // Bind event listener
                       function on(selector, type, callback) {
