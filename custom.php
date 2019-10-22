@@ -31,9 +31,12 @@ function display_video($item='item') {
         $found_video = false;
     	foreach (loop('files', $item->Files) as $file){
     		$videoMime = metadata($file,'MIME Type');
-            if ( in_array($videoMime,$captionTypes)) {
+            if ( in_array($videoMime,$captionTypes) && !preg_match('/track_description/', $file->original_filename)) {
                 $transcriptFile = $file;
-                break;
+                // break;
+            } else if (in_array($videoMime,$captionTypes) && preg_match('/track_description/', $file->original_filename)) {
+                $descriptionFile = $file;
+                // break;
             }
         }
         foreach (loop('files', $item->Files) as $file){
@@ -46,6 +49,9 @@ function display_video($item='item') {
         				<source src="<?php echo WEB_ROOT ?>/files/original/<?php echo $file->filename ?>" type="<?php echo $videoMime ?>" size="266">
                         <?php if ($transcriptFile): ?>
                             <track kind="captions" label="English" srclang="en" src="<?php echo WEB_ROOT ?>/files/original/<?php echo $transcriptFile->filename ?>" default>
+                        <?php endif; ?>
+                        <?php if ($descriptionFile) : ?>
+                            <track kind="descriptions" label="English" srclang="en" src="<?php echo WEB_ROOT ?>/files/original/<?php echo $descriptionFile->filename ?>" default>
                         <?php endif; ?>
         				<a href="<?php echo WEB_ROOT ?>/files/original/<?php echo $file->filename ?>" download>Download</a>
         			</video>
