@@ -6,7 +6,8 @@ Minimalist inspired theme for video clip galleries - built for Philly Signs proj
 * Featured collections are previewed on the home homepage
 * For embedding iframes in the gallery - If you add an Item Type Element called "Embedded Video" to any Item Type, you can paste in iframes into the element field and it will display alongside other videos in the gallery
 * Most video types will display consistently in the gallery views, using an accessible player ([plyr](https://github.com/sampotts/plyr))
-* To attach transcripts of videos, upload the video and a VTT to the same item
+* To attach transcripts of videos, upload the video and a VTT file to the same item.
+* To attach a [track element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#attr-kind) suitable for users who are blind or where the video cannot be seen, upload a VTT file to the same item with a title containing `track_description` in the exact format (e.g.: `myinterview_track_description.vtt`).
 
 ## Getting Started
 
