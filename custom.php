@@ -33,10 +33,10 @@ function display_video($item = 'item')
         foreach (loop('files', $item->Files) as $file) {
             $videoMime = metadata($file, 'MIME Type');
             // Look for and identify our VTT files.
-            if (in_array($videoMime, $captionTypes) && !preg_match('/track_description/', $file->original_filename)) {
-                $transcriptFile = $file;
-            } else if (in_array($videoMime, $captionTypes) && preg_match('/track_description/', $file->original_filename)) {
+            if (in_array($videoMime, $captionTypes) && preg_match('/track_description/', $file->original_filename)) {
                 $descriptionFile = $file;
+            } else if (in_array($videoMime, $captionTypes)) {
+                $transcriptFile = $file;
             }
         }
         foreach (loop('files', $item->Files) as $file) {
