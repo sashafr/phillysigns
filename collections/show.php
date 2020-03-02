@@ -1,5 +1,8 @@
 <?php echo head(); ?>
     <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft"><?php echo metadata($collection, array('Dublin Core','Title')) ?></h2>
+    <?php if (metadata($collection, array('Dublin Core', 'Description'))): ?>
+      <h3 class="animate-box" data-animate-effect="fadeInLeft"><?php echo metadata($collection, array('Dublin Core', 'Description')); ?></h3>
+    <?php endif ?>
     <div class="row animate-box" data-animate-effect="fadeInLeft">
         <?php
           $siteNumItemsPerPage = get_option('per_page_public');
