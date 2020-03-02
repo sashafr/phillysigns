@@ -37,22 +37,18 @@
     </div>
 
     <?php
-    echo link_to_items_browse(
-      __(
-        plural(
-          'View item',
-          ($collectionItemCount > $siteNumItemsPerPage ? 'View more items in this collection' : 'Sort and browse these items'),
+      echo link_to_items_browse(
+        __(
+          plural(
+            'View item',
+            ($collectionItemCount > $siteNumItemsPerPage ? 'View more items in this collection' : 'Sort and browse these items'),
+            $totalItems
+          ),
           $totalItems
         ),
-        $totalItems
-      ),
-      array(
-        'collection' => metadata('collection', 'id')
-      ),
-      array(
-        'class' => 'view-items-link view-items-link--coll-show'
-      )
-    );
+        array('collection' => metadata('collection', 'id')),
+        array('class' => 'view-items-link view-items-link--coll-show')
+      );
     ?>
     
 <?php echo foot(); ?>
