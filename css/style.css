@@ -1266,6 +1266,11 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     border-bottom: none;
 }
 
+.view-items-link--coll-show {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
 .item-show-main-video {
     z-index: 500;
 }
