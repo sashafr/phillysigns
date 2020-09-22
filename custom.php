@@ -1,19 +1,20 @@
 <?php
 
 /*
-** Find and display first attached video file
-*  Inspired by Curatescape:
-*  https://github.com/CPHDH/theme-curatescape
-*  Non-embedded videos use plyr:
-*  https://github.com/sampotts/plyr
-*/
-function display_video($item='item') {
-    if (element_exists('Item Type Metadata','Embedded Video') && metadata($item,array('Item Type Metadata','Embedded Video'))) {
-        $videoTitle = metadata($item,array('Dublin Core','Title'));
-		$videoDesc = metadata($item,array('Dublin Core','Description')); ?>
+ ** Find and display first attached video file
+ *  Inspired by Curatescape:
+ *  https://github.com/CPHDH/theme-curatescape
+ *  Non-embedded videos use plyr:
+ *  https://github.com/sampotts/plyr
+ */
+function display_video($item = 'item')
+{
+    if (element_exists('Item Type Metadata', 'Embedded Video') && metadata($item, array('Item Type Metadata', 'Embedded Video'))) {
+        $videoTitle = metadata($item, array('Dublin Core', 'Title'));
+        $videoDesc = metadata($item, array('Dublin Core', 'Description'));?>
         <div class="center-video">
             <div class="plyr__video-embed" id="jsplayer-<?php echo $item->id ?>">
-                <?php echo metadata($item,array('Item Type Metadata','Embedded Video')); ?>
+                <?php echo metadata($item, array('Item Type Metadata', 'Embedded Video')); ?>
             </div>
         </div>
         <script async defer>
@@ -26,22 +27,23 @@ function display_video($item='item') {
             });
 		</script>
     <?php } else {
-    	$videoTypes = array('video/mp4','video/mpeg','video/quicktime');
+        $videoTypes = array('video/mp4', 'video/mpeg', 'video/quicktime');
         $captionTypes = array('text/vtt', 'text/plain');
         $found_video = false;
-    	foreach (loop('files', $item->Files) as $file){
-    		$videoMime = metadata($file,'MIME Type');
-          if (in_array($videoMime,$captionTypes) && preg_match('/track_description/', $file->original_filename)) {
-              $descriptionFile = $file;
-          } else if (in_array($videoMime,$captionTypes)) {
-              $transcriptFile = $file;
-          }
+        foreach (loop('files', $item->Files) as $file) {
+            $videoMime = metadata($file, 'MIME Type');
+            // Look for and identify our VTT files.
+            if (in_array($videoMime, $captionTypes) && preg_match('/track_description/', $file->original_filename)) {
+                $descriptionFile = $file;
+            } else if (in_array($videoMime, $captionTypes)) {
+                $transcriptFile = $file;
+            }
         }
-        foreach (loop('files', $item->Files) as $file){
-                $videoMime = metadata($file, 'MIME Type');
-    		if ( in_array($videoMime,$videoTypes) ): ?>
-    			<?php $videoTitle = metadata($file,array('Dublin Core','Title')); ?>
-    			<?php $videoDesc = metadata($file,array('Dublin Core','Description')); ?>
+        foreach (loop('files', $item->Files) as $file) {
+            $videoMime = metadata($file, 'MIME Type');
+            if (in_array($videoMime, $videoTypes)): ?>
+    			<?php $videoTitle = metadata($file, array('Dublin Core', 'Title'));?>
+    			<?php $videoDesc = metadata($file, array('Dublin Core', 'Description'));?>
                 <div class="center-video">
         			<video controls crossorigin playsinline id="jsplayer-<?php echo $file->id ?>" data-plyr-config='{ "title": "<?php echo metadata($item,array('Item Type Metadata','Alt Text')) ?>" }'>
         				<source src="<?php echo WEB_ROOT ?>/files/original/<?php echo $file->filename ?>" type="<?php echo $videoMime ?>" size="266">
@@ -68,10 +70,11 @@ function display_video($item='item') {
                       }
                     });
         		</script>
-                <?php $found_video = true; ?>
-                <?php break; ?>
-    		<?php endif; ?>
-    	<?php };
+                <?php $found_video = true;?>
+                <?php break;?>
+    		<?php endif;?>
+    	<?php }
+        ;
         // if no videos found, just use thumbnail image
         if (!$found_video) {
             $itemImage = record_image($item, 'square_thumbnail');
