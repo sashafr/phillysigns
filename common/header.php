@@ -3,8 +3,8 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo get_html_lang(); ?>"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo option('site_title') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +38,7 @@
     <meta name="twitter:title" content="<?php echo option('site_title'); ?>" />
     <meta name="twitter:url" content="<?php echo WEB_ROOT; ?>" />
     <meta name="twitter:card" content="summary" />
+    <meta name="google-site-verification" content="_QoDXnjXSH4T4pqdzWdKEgwSyB1MsMPgZ8igvFUY_Cs" />
 
     <?php if(get_theme_option('favicon')): ?>
         <?php $favicon_url = WEB_ROOT.'/files/theme_uploads/'.get_theme_option('favicon'); ?>

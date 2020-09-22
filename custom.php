@@ -31,10 +31,11 @@ function display_video($item='item') {
         $found_video = false;
     	foreach (loop('files', $item->Files) as $file){
     		$videoMime = metadata($file,'MIME Type');
-            if ( in_array($videoMime,$captionTypes)) {
-                $transcriptFile = $file;
-                break;
-            }
+          if (in_array($videoMime,$captionTypes) && preg_match('/track_description/', $file->original_filename)) {
+              $descriptionFile = $file;
+          } else if (in_array($videoMime,$captionTypes)) {
+              $transcriptFile = $file;
+          }
         }
         foreach (loop('files', $item->Files) as $file){
                 $videoMime = metadata($file, 'MIME Type');
@@ -42,17 +43,25 @@ function display_video($item='item') {
     			<?php $videoTitle = metadata($file,array('Dublin Core','Title')); ?>
     			<?php $videoDesc = metadata($file,array('Dublin Core','Description')); ?>
                 <div class="center-video">
-        			<video controls crossorigin playsinline id="jsplayer-<?php echo $file->id ?>">
+        			<video controls crossorigin playsinline id="jsplayer-<?php echo $file->id ?>" data-plyr-config='{ "title": "<?php echo metadata($item,array('Item Type Metadata','Alt Text')) ?>" }'>
         				<source src="<?php echo WEB_ROOT ?>/files/original/<?php echo $file->filename ?>" type="<?php echo $videoMime ?>" size="266">
                         <?php if ($transcriptFile): ?>
                             <track kind="captions" label="English" srclang="en" src="<?php echo WEB_ROOT ?>/files/original/<?php echo $transcriptFile->filename ?>" default>
+                        <?php endif; ?>
+                        <?php if ($descriptionFile) : ?>
+                            <track kind="descriptions" label="English" srclang="en" src="<?php echo WEB_ROOT ?>/files/original/<?php echo $descriptionFile->filename ?>" default>
                         <?php endif; ?>
         				<a href="<?php echo WEB_ROOT ?>/files/original/<?php echo $file->filename ?>" download>Download</a>
         			</video>
                 </div>
                 <script async defer>
                     document.addEventListener('DOMContentLoaded', () => {
-                      const player = new Plyr('#jsplayer-<?php echo $file->id ?>');
+                      const player = new Plyr('#jsplayer-<?php echo $file->id ?>', {
+                        clickToPlay: false,
+                        captions: {
+                          active: true,
+                        },
+                      });
                       // Bind event listener
                       function on(selector, type, callback) {
                         document.querySelector(selector).addEventListener(type, callback, false);

@@ -122,7 +122,7 @@ figure {
     list-style: none;
 }
 #fh5co-aside #fh5co-main-menu ul li a {
-    color: rgba(0, 0, 0, 0.5);
+    color: #000;
     text-decoration: none;
     letter-spacing: .1em;
     text-transform: uppercase;
@@ -1266,6 +1266,11 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     border-bottom: none;
 }
 
+.view-items-link--coll-show {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
 .item-show-main-video {
     z-index: 500;
 }
@@ -1280,4 +1285,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
         text-align: center;
         padding-top: 30px;
     }
+}
+
+.col-md-4 .plyr__captions .plyr__caption {
+    font-size: 10px;
+}
+
+.plyr {
+  line-height: 1 !important;
 }
