@@ -288,7 +288,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .work-item a h3 {
     font-size: 20px;
     color: #000;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 .work-item a p {
     font-size: 14px;
@@ -1285,10 +1285,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
         text-align: center;
         padding-top: 30px;
     }
-}
-
-.col-md-4 .plyr__captions .plyr__caption {
-    font-size: 10px;
 }
 
 .plyr {

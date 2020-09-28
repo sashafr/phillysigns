@@ -24,9 +24,9 @@
         <?php foreach (loop('featcols') as $col): ?>
             <h3 class="fh5co-feature"><?php echo link_to_collection(metadata($col, array('Dublin Core', 'Title')), null, null, $col); ?></h3>
             <div class="row animate-box" data-animate-effect="fadeInLeft">
-                <?php set_loop_records('featcolitems', get_records('Item',array('collection'=>$col),3)); ?>
+                <?php set_loop_records('featcolitems', get_records('Item',array('collection'=>$col),4)); ?>
                 <?php foreach (loop('featcolitems') as $featcolitem): ?>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+                    <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 work-item">
                         <div class="row video-row">
                             <?php echo display_video($featcolitem) ?>
                         </div>
