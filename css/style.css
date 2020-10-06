@@ -1290,3 +1290,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .plyr {
   line-height: 1 !important;
 }
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}

@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo get_html_lang(); ?>"> <!--<![endif]-->
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo option('site_title') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,7 +67,7 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div id="fh5co-page">
-        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i><span class="sr-only">Menu</span></a>
         <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
             <h1 id="fh5co-logo"><?php echo link_to_home_page(theme_logo()); ?></h1>

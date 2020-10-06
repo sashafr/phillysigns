@@ -10,7 +10,7 @@
             <figure class="ps-header-image-container">
                 <?php if(get_theme_option('home_about_banner')): ?>
                     <?php $banner_url = WEB_ROOT.'/files/theme_uploads/'.get_theme_option('home_about_banner'); ?>
-                    <img src="<?php echo $banner_url ?>" alt="About Section Header Image">
+                    <img src="<?php echo $banner_url ?>" alt="<?php echo get_theme_option('home_banner_alt_text') ?>">
                 <?php endif; ?>
             </figure>
             <p class="text-center quote"><?php echo get_theme_option('homepage_text') ?></p>
